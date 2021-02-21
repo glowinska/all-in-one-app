@@ -31,6 +31,6 @@ data class SleepNight(
         @ColumnInfo(name = "end_time_ms")
         var endTimeMs: Long = startTimeMs,
 
-        @ColumnInfo(name = "")
+        @ColumnInfo(name = "quality")
         var sleepQuality: Int = -1
 )
