@@ -16,8 +16,6 @@
 
 package com.example.android.sleeptracker.sleeptracker
 
-import android.app.Application
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -57,6 +55,10 @@ class SleepTrackerFragment : Fragment() {
         val sleepTrackerViewModel =
                 ViewModelProvider(
                 this, viewModelFactory).get(SleepTrackerViewModel::class.java)
+
+        binding.sleepTackerViewModel = sleepTrackerViewModel
+
+        binding.lifecycleOwner = this
 
         return binding.root
     }
