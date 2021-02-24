@@ -26,6 +26,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.android.sleeptracker.R
 import com.example.android.sleeptracker.database.SleepDatabase
 import com.example.android.sleeptracker.databinding.FragmentSleepTrackerBinding
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 
 /**
  * A fragment with buttons to record start and end times for sleep, which are saved in
@@ -55,6 +57,14 @@ class SleepTrackerFragment : Fragment() {
         val sleepTrackerViewModel =
                 ViewModelProvider(
                 this, viewModelFactory).get(SleepTrackerViewModel::class.java)
+
+        sleepTrackerViewModel.navigateToSleepQuality.observe(viewLifecycleOwner, Observer {
+            night -> night?.let {
+            this.findNavController().navigate(SleepTrackerFragmentDirections
+                    .actionSleepTrackerFragmentToSleepQualityFragment(night.nightId))
+            sleepTrackerViewModel.doneNavigating()
+        }
+        })
 
         binding.sleepTackerViewModel = sleepTrackerViewModel
 
