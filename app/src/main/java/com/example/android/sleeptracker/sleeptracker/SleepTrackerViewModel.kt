@@ -17,11 +17,10 @@
 package com.example.android.sleeptracker.sleeptracker
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.android.sleeptracker.database.SleepDatabaseDao
 import com.example.android.sleeptracker.database.SleepNight
+import com.example.android.sleeptracker.formatNights
 import kotlinx.coroutines.launch
 
 /**
@@ -32,6 +31,12 @@ class SleepTrackerViewModel(
         application: Application) : AndroidViewModel(application) {
 
     private var tonight = MutableLiveData<SleepNight?>()
+
+    private val nights = database.getAllNights()
+
+    val nightsString = Transformations.map(nights) {
+        nights-> formatNights(nights, application.resources)
+    }
 
     init {
         initializeTonight()
@@ -51,4 +56,38 @@ class SleepTrackerViewModel(
         return night
     }
 
+    fun onStartTracking() {
+        viewModelScope.launch {
+            val newNight = SleepNight()
+            insert(newNight)
+            tonight.value = getTonightFromDatabase()
+        }
+    }
+
+    private suspend fun insert(newNight: SleepNight) {
+        database.insert(newNight)
+    }
+
+    fun onStopTracking() {
+        viewModelScope.launch {
+            val oldNight = tonight.value ?: return@launch
+            oldNight.endTimeMs = System.currentTimeMillis()
+            update(oldNight)
+        }
+    }
+
+    private suspend fun update(night: SleepNight) {
+        database.update(night)
+    }
+
+    fun onClear() {
+        viewModelScope.launch {
+            clear()
+            tonight.value = null
+        }
+    }
+
+    suspend fun clear() {
+        database.clear()
+    }
 }
