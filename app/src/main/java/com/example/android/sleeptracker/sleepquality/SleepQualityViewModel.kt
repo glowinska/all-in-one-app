@@ -20,7 +20,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.sleeptracker.database.SleepDatabase
 import com.example.android.sleeptracker.database.SleepDatabaseDao
 import kotlinx.coroutines.launch
 
