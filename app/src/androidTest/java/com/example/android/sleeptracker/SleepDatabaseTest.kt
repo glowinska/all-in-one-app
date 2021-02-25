@@ -17,8 +17,10 @@
 package com.example.android.sleeptracker
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Transformations
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.android.sleeptracker.database.SleepDatabase
 import com.example.android.sleeptracker.database.SleepDatabaseDao
@@ -61,29 +63,42 @@ class SleepDatabaseTest {
         db.close()
     }
 
-//    @Test
-//    @Throws(Exception::class)
-//    fun insertAndGetNight() {
-//        val night = SleepNight()
-//        sleepDao.insert(night)
-//        val tonight = sleepDao.getTonight()
-//        assertEquals(tonight?.sleepQuality, -1)
-//    }
-//
-//    @Test
-//    @Throws(Exception::class)
-//    fun updateAndGetNight() {
-//        val night = SleepNight(sleepQuality = 0)
-//        sleepDao.insert(night)
-//        val tonight = sleepDao.getTonight()
-//        assertEquals(tonight?.sleepQuality, 0)
-//    }
-//
-//    @Test
-//    @Throws(Exception::class)
-//    fun clearNights() {
-//        sleepDao.clear()
-//        assertEquals(sleepDao.getAllNights().value?.size, null)
-//    }
+    @Test
+    @Throws(Exception::class)
+    fun insertAndGetNight() {
+        val night = SleepNight()
+        sleepDao.insertTest(night)
+        val tonight = sleepDao.getTonightTest()
+        assertEquals(tonight?.sleepQuality, -1)
+    }
 
+    @Test
+    @Throws(Exception::class)
+    fun updateAndGetNight() {
+        val night = SleepNight(sleepQuality = 0)
+        sleepDao.insertTest(night)
+        val tonight = sleepDao.getTonightTest()
+        assertEquals(tonight?.sleepQuality, 0)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun clearNights() {
+        sleepDao.clearTest()
+        Transformations.map(sleepDao.getAllNights()) {
+            assertEquals(it.isEmpty(), true)
+        }
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun getAllNights() {
+        val night = SleepNight()
+        sleepDao.insertTest(night)
+        sleepDao.insertTest(night)
+        sleepDao.insertTest(night)
+        var size = Transformations.map(sleepDao.getAllNights()) {
+            assertEquals(it.size, 3)
+        }
+    }
 }
