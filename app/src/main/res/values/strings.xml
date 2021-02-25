@@ -17,8 +17,8 @@
 <resources>
 
     <!-- App title and fragment titles -->
-    <string name="sleep_tracker_fragment">SleepTrackerFragment</string>
-    <string name="sleep_quality_fragment">SleepQualityFragment</string>
+    <string name="sleep_tracker_fragment">Sleep Tracker</string>
+    <string name="sleep_quality_fragment">Sleep Quality</string>
 
     <!-- Button labels -->
     <string name="start">Start</string>
@@ -55,8 +55,8 @@
     <string name="app_name">ChangingActivities</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Available Applications</string>
+    <string name="nav_header_subtitle">Choose which one you want to use :)</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
