@@ -15,18 +15,19 @@
  *
  */
 
-package com.example.android.marsrealestate
+package com.example.android.sleeptracker
 
 import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-//import com.bumptech.glide.Glide
-//import com.bumptech.glide.request.RequestOptions
-import com.example.android.marsrealestate.network.MarsProperty
-import com.example.android.marsrealestate.overview.MarsApiStatus
-import com.example.android.marsrealestate.overview.PhotoGridAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+
+import com.example.android.sleeptracker.network.MarsProperty
+import com.example.android.sleeptracker.overview.MarsApiStatus
+import com.example.android.sleeptracker.overview.PhotoGridAdapter
 
 /**
  * When there is no Mars property data (data is null), hide the [RecyclerView], otherwise show it.
