@@ -20,5 +20,9 @@
             android:id="@+id/sleep_tracker_fragment"
             android:icon="@drawable/ic_menu_sleep_tracker"
             android:title="@string/menu_sleeptracker" />
+        <item
+            android:id="@+id/mars_fragment"
+            android:icon="@drawable/ic_menu_sleep_tracker"
+            android:title="@string/menu_mars" />
     </group>
 </menu>
