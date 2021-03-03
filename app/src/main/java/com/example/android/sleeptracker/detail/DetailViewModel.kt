@@ -14,18 +14,18 @@
  *  limitations under the License.
  */
 
-package com.example.android.marsrealestate.detail
+package com.example.android.sleeptracker.detail
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.android.marsrealestate.network.MarsProperty
-import com.example.android.marsrealestate.R
+import com.example.android.sleeptracker.network.MarsProperty
+import com.example.android.sleeptracker.R
 
 /**
  *  The [ViewModel] associated with the [DetailFragment], containing information about the selected
  *  [MarsProperty].
  */
-class DetailViewModel( marsProperty: MarsProperty,
+class DetailViewModel(marsProperty: MarsProperty,
                       app: Application) : AndroidViewModel(app) {
 
     // The internal MutableLiveData for the selected property
