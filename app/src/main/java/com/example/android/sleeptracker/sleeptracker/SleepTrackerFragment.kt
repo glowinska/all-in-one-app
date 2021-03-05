@@ -59,7 +59,7 @@ class SleepTrackerFragment : Fragment() {
                 ViewModelProvider(
                 this, viewModelFactory).get(SleepTrackerViewModel::class.java)
 
-        sleepTrackerViewModel.navigateToSleepQuality.observe(this, Observer {
+        sleepTrackerViewModel.navigateToSleepQuality.observe(viewLifecycleOwner, Observer {
             night -> night?.let {
             this.findNavController().navigate(SleepTrackerFragmentDirections
                     .actionSleepTrackerFragmentToSleepQualityFragment(night.nightId))
@@ -67,7 +67,7 @@ class SleepTrackerFragment : Fragment() {
         }
         })
 
-        sleepTrackerViewModel.showSnackBarEvent.observe(this, Observer {
+        sleepTrackerViewModel.showSnackBarEvent.observe(viewLifecycleOwner, Observer {
             if (it == true) {
                 Snackbar.make(
                         activity?.findViewById(android.R.id.content)!!,
