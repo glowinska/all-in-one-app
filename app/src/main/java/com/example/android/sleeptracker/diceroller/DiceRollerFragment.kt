@@ -34,7 +34,6 @@ class DiceRollerFragment : Fragment() {
         })
         val rollButton: Button = root.findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
-        val resultText: TextView = root.findViewById(R.id.result_text)
         return root
     }
 
@@ -42,5 +41,14 @@ class DiceRollerFragment : Fragment() {
         Toast.makeText(getActivity(), "Dice rolled", Toast.LENGTH_SHORT).show()
         val randomInt = (1..6).random()
         result_text.text = randomInt.toString()
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+        dice_image.setImageResource(drawableResource)
     }
 }

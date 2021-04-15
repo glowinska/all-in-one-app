@@ -11,7 +11,7 @@ import com.example.android.sleeptracker.R
 class DiceRollerViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Dice Roller Fragment"
+        value = ""
     }
     val text: LiveData<String> = _text
 
