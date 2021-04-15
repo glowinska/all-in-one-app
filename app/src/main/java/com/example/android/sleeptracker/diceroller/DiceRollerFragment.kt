@@ -1,4 +1,4 @@
-package com.example.android.sleeptracker.aboutme
+package com.example.android.sleeptracker.diceroller
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,20 +11,20 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.android.sleeptracker.R
 
 
-class AboutMeFragment : Fragment() {
+class DiceRollerFragment : Fragment() {
 
-    private lateinit var aboutMeViewModel: AboutMeViewModel
+    private lateinit var diceRollerViewModel: DiceRollerViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        aboutMeViewModel =
-                ViewModelProviders.of(this).get(AboutMeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_about_me, container, false)
-        val textView: TextView = root.findViewById(R.id.text_about_me)
-        aboutMeViewModel.text.observe(viewLifecycleOwner, Observer {
+        diceRollerViewModel =
+                ViewModelProviders.of(this).get(DiceRollerViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_dice_roller, container, false)
+        val textView: TextView = root.findViewById(R.id.text_dice_roller)
+        diceRollerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

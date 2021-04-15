@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.android.sleeptracker.aboutme.AboutMeFragment"
+        android:name="com.example.android.sleeptracker.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
@@ -73,7 +73,12 @@
     </fragment>
     <fragment
         android:id="@+id/about_me_fragment"
-        android:name="com.example.android.sleeptracker.aboutme.AboutMe"
+        android:name="com.example.android.sleeptracker.aboutme.AboutMeFragment"
         android:label="@string/menu_about_me"
         tools:layout="@layout/fragment_about_me" />
+    <fragment
+        android:id="@+id/dice_roller_fragment"
+        android:name="com.example.android.sleeptracker.diceroller.DiceRollerFragment"
+        android:label="@string/menu_dice_roller"
+        tools:layout="@layout/fragment_dice_roller" />
 </navigation>
