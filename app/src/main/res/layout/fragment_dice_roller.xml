@@ -24,10 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/dice_1"
+        app:srcCompat="@drawable/empty_dice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/roll_button"/>
+        app:layout_constraintBottom_toTopOf="@+id/roll_button"
+        tools:src="@drawable/dice_1"/>
     <Button
         android:id="@+id/roll_button"
         android:layout_width="wrap_content"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -19,6 +20,7 @@ import kotlinx.android.synthetic.main.nav_header_main.*
 class DiceRollerFragment : Fragment() {
 
     private lateinit var diceRollerViewModel: DiceRollerViewModel
+    lateinit var diceImage : ImageView
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -32,6 +34,7 @@ class DiceRollerFragment : Fragment() {
         diceRollerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        diceImage = root.findViewById(R.id.dice_image)
         val rollButton: Button = root.findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
         return root
@@ -49,6 +52,6 @@ class DiceRollerFragment : Fragment() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        dice_image.setImageResource(drawableResource)
+        diceImage.setImageResource(drawableResource)
     }
 }
