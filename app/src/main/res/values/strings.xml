@@ -76,5 +76,6 @@
     <string name="menu_mars">Mars</string>
     <string name="menu_about_me">About me</string>
     <string name="menu_dice_roller">Dice Roller</string>
+    <string name="roll">Roll</string>
 
 </resources>
