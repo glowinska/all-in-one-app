@@ -71,14 +71,23 @@
             app:argType="com.example.android.sleeptracker.network.MarsProperty"
             />
     </fragment>
+
     <fragment
         android:id="@+id/about_me_fragment"
         android:name="com.example.android.sleeptracker.aboutme.AboutMeFragment"
         android:label="@string/menu_about_me"
         tools:layout="@layout/fragment_about_me" />
+
     <fragment
         android:id="@+id/dice_roller_fragment"
         android:name="com.example.android.sleeptracker.diceroller.DiceRollerFragment"
         android:label="@string/menu_dice_roller"
         tools:layout="@layout/fragment_dice_roller" />
+
+    <fragment
+        android:id="@+id/color_fragment"
+        android:name="com.example.android.sleeptracker.color.ColorFragment"
+        android:label="@string/menu_color"
+        tools:layout="@layout/fragment_color" />
+
 </navigation>

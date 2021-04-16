@@ -55,7 +55,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.sleep_tracker_fragment,
                 R.id.mars_fragment,
                 R.id.about_me_fragment,
-                R.id.dice_roller_fragment
+                R.id.dice_roller_fragment,
+                R.id.color_fragment
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

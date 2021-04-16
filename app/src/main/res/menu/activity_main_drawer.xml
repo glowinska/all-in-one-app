@@ -32,5 +32,9 @@
             android:id="@+id/dice_roller_fragment"
             android:icon="@drawable/ic_dice_roller"
             android:title="@string/menu_dice_roller" />
+        <item
+            android:id="@+id/color_fragment"
+            android:icon="@drawable/ic_color"
+            android:title="@string/menu_color" />
     </group>
 </menu>
