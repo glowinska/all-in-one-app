@@ -23,10 +23,10 @@ class AboutMeFragment : Fragment() {
         aboutMeViewModel =
                 ViewModelProviders.of(this).get(AboutMeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_about_me, container, false)
-        val textView: TextView = root.findViewById(R.id.text_about_me)
-        aboutMeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = root.findViewById(R.id.text_about_me)
+//        aboutMeViewModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }
