@@ -93,5 +93,12 @@
     <string name="what_is_your_nickname">What is your Nickname?</string>
     <string name="done">Done</string>
     <string name="menu_color">Color My Views</string>
+    <string name="box_name">Box One</string>
+    <string name="box_two">Box Two</string>
+    <string name="box_three">Box Three</string>
+    <string name="box_four">Box Four</string>
+    <string name="box_five">Box Five</string>
+
+
 
 </resources>
