@@ -17,6 +17,7 @@ class AboutBindingFragment : Fragment() {
     private lateinit var aboutBindingViewModel: AboutMeViewModel
     private var _binding: FragmentAboutBindingBinding? = null
     private val binding get() = _binding!!
+    private val mName: MyName = MyName("About Binding")
 
 
     override fun onCreateView(
@@ -35,16 +36,19 @@ class AboutBindingFragment : Fragment() {
             nicknameText.setOnClickListener {
                 updateNickname()
             }
+            myName = mName
         }
         return view
     }
 
     private fun addNickname() {
         binding.apply {
-            nicknameText.text = nicknameEdit.text
+            myName?.nickname = nicknameEdit.text.toString()
             nicknameText.visibility = View.VISIBLE
             doneButton.visibility = View.GONE
             nicknameEdit.visibility = View.GONE
+            // The UI is refreshed with the value in the updated binding object.
+            invalidateAll()
         }
         // Hide the keyboard.
         val inputMethodManager = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
