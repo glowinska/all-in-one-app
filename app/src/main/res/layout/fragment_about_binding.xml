@@ -14,7 +14,7 @@
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_name"
+            android:text="@string/my_name_binding"
             android:textAlignment="center" />
 
         <EditText
@@ -69,7 +69,7 @@
                 style="@style/NameStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/bio" />
+                android:text="@string/bio_binding" />
         </ScrollView>
     </LinearLayout>
 </layout>
