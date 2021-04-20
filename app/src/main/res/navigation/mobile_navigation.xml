@@ -59,6 +59,9 @@
         <action
             android:id="@+id/action_showDetail"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mars_fragment_self"
+            app:destination="@id/mars_fragment" />
     </fragment>
 
     <fragment
@@ -89,5 +92,11 @@
         android:name="com.example.android.sleeptracker.color.ColorFragment"
         android:label="@string/menu_color"
         tools:layout="@layout/fragment_color" />
+
+    <fragment
+        android:id="@+id/about_binding_fragment"
+        android:name="com.example.android.sleeptracker.aboutme.AboutBindingFragment"
+        android:label="@string/menu_binding"
+        tools:layout="@layout/fragment_about_binding" />
 
 </navigation>

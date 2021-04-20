@@ -16,14 +16,11 @@
 
 package com.example.android.sleeptracker
 
-import android.content.Context
 import android.os.Bundle
 import android.view.Menu
-import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -43,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        drawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+        drawerLayout.setScrimColor(resources.getColor(android.R.color.transparent));
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
@@ -56,7 +53,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.mars_fragment,
                 R.id.about_me_fragment,
                 R.id.dice_roller_fragment,
-                R.id.color_fragment
+                R.id.color_fragment,
+                R.id.about_binding_fragment
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

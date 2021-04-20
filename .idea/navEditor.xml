@@ -20,6 +20,30 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="binding_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-64" />
+                            <option name="y" value="1261" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="color_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="377" />
+                            <option name="y" value="998" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="detailFragment">
                     <value>
                       <LayoutPositions>
@@ -55,24 +79,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_mars_fragment_self">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_showDetail">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="nav_color">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="324" />
-                            <option name="y" value="999" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

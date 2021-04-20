@@ -36,5 +36,9 @@
             android:id="@+id/color_fragment"
             android:icon="@drawable/ic_color"
             android:title="@string/menu_color" />
+        <item
+            android:id="@+id/about_binding_fragment"
+            android:icon="@drawable/ic_binding"
+            android:title="@string/menu_binding" />
     </group>
 </menu>
