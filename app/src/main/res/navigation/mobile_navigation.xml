@@ -55,7 +55,7 @@
         android:id="@+id/mars_fragment"
         android:name="com.example.android.sleeptracker.overview.OverviewFragment"
         android:label="Mars estate"
-        tools:layout="@layout/fragment_overview" >
+        tools:layout="@layout/fragment_overview">
         <action
             android:id="@+id/action_showDetail"
             app:destination="@id/detailFragment" />
@@ -71,8 +71,7 @@
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="selectedProperty"
-            app:argType="com.example.android.sleeptracker.network.MarsProperty"
-            />
+            app:argType="com.example.android.sleeptracker.network.MarsProperty" />
     </fragment>
 
     <fragment
@@ -98,5 +97,22 @@
         android:name="com.example.android.sleeptracker.aboutme.AboutBindingFragment"
         android:label="@string/menu_binding"
         tools:layout="@layout/fragment_about_binding" />
-
+    <!--    R.id.title_fragment,-->
+    <!--    R.id.about_game_fragment,-->
+    <!--    R.id.rules_fragment-->
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="com.example.android.sleeptracker.navigation.TitleFragment"
+        android:label="@string/menu_play_game"
+        tools:layout="@layout/fragment_title" />
+    <fragment
+        android:id="@+id/about_game_fragment"
+        android:name="com.example.android.sleeptracker.navigation.AboutFragment"
+        android:label="@string/menu_about_game"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rules_fragment"
+        android:name="com.example.android.sleeptracker.navigation.RulesFragment"
+        android:label="@string/menu_game_rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>

@@ -54,7 +54,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.about_me_fragment,
                 R.id.dice_roller_fragment,
                 R.id.color_fragment,
-                R.id.about_binding_fragment
+                R.id.about_binding_fragment,
+                R.id.title_fragment,
+                R.id.about_game_fragment,
+                R.id.rules_fragment
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

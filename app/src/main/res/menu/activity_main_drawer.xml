@@ -40,5 +40,17 @@
             android:id="@+id/about_binding_fragment"
             android:icon="@drawable/ic_binding"
             android:title="@string/menu_binding" />
+        <item
+            android:id="@+id/title_fragment"
+            android:icon="@drawable/ic_binding"
+            android:title="@string/menu_play_game" />
+        <item
+            android:id="@+id/about_game_fragment"
+            android:icon="@drawable/ic_binding"
+            android:title="@string/menu_about_game" />
+        <item
+            android:id="@+id/rules_fragment"
+            android:icon="@drawable/ic_binding"
+            android:title="@string/menu_game_rules" />
     </group>
 </menu>

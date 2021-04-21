@@ -133,6 +133,9 @@
     <string name="sharing_not_available">Sharing Not Available</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_play_game">Play game</string>
+    <string name="menu_about_game">About game</string>
+    <string name="menu_game_rules">Game rules</string>
 
 
 </resources>
