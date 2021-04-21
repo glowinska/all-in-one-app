@@ -9,10 +9,12 @@
             android:orientation="vertical">
 
             <fragment
-                android:id="@+id/titleFragment"
-                android:name="com.example.android.sleeptracker.navigation.TitleFragment"
+                android:id="@+id/myNavHostFragment"
+                android:name="com.example.android.sleeptracker.navigation.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                app:navGraph="@navigation/navigation2"
+                app:defaultNavHost="true"
                 />
         </LinearLayout>
 
