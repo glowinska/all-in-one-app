@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/accessibility_new/baseline_accessibility_new_24.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialiconstwotone/playlist_add/twotone_playlist_add_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,7 +33,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_binding" />
+                            <entry key="outputName" value="ic_about_game" />
                             <entry key="sourceFile" value="C:\Users\anna.glowinska\Desktop\sleep-tracker" />
                           </map>
                         </option>
