@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
 
+
 android {
     compileSdkVersion 30
     defaultConfig {
@@ -89,5 +90,6 @@ dependencies {
 
     // Material library
     implementation "com.google.android.material:material:$version"
+
 }
 
