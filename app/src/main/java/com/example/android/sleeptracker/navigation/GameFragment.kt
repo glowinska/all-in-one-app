@@ -48,21 +48,15 @@ class GameFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
                 inflater, R.layout.fragment_game, container, false)
 
-        // Shuffles the questions and sets the question index to the first question.
         randomizeQuestions()
 
-        // Bind this fragment class to the layout
         binding.game = this
 
-        // Set the onClickListener for the submitButton
-        binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
-        { view: View ->
+        binding.submitButton.setOnClickListener { view: View ->
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
-            // Do nothing if nothing is checked (id == -1)
             if (-1 != checkedId) {
                 var answerIndex = 0
                 when (checkedId) {
@@ -72,7 +66,6 @@ class GameFragment : Fragment() {
                 }
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
                     questionIndex++
-                    // Advance to the next question
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
                         setQuestion()
@@ -97,9 +90,7 @@ class GameFragment : Fragment() {
 
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
-        // randomize the answers into a copy of the array
         answers = currentQuestion.answers.toMutableList()
-        // and shuffle them
         answers.shuffle()
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)
     }

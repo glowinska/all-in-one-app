@@ -1,25 +1,13 @@
 package com.example.android.sleeptracker.navigation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.android.sleeptracker.R
-import com.example.android.sleeptracker.database.SleepDatabase
-import com.example.android.sleeptracker.databinding.FragmentSleepTrackerBinding
 import com.example.android.sleeptracker.databinding.FragmentTitleBinding
-import com.example.android.sleeptracker.overview.OverviewFragmentDirections
-import com.example.android.sleeptracker.sleepquality.SleepQualityFragmentDirections
-import com.example.android.sleeptracker.sleepquality.SleepQualityViewModel
-import com.example.android.sleeptracker.sleepquality.SleepQualityViewModelFactory
-import com.example.android.sleeptracker.sleeptracker.SleepTrackerFragmentDirections
-import com.example.android.sleeptracker.sleeptracker.SleepTrackerViewModel
-import com.example.android.sleeptracker.sleeptracker.SleepTrackerViewModelFactory
 
 class TitleFragment : Fragment() {
 
@@ -32,6 +20,18 @@ class TitleFragment : Fragment() {
         binding.playButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
+
+        setHasOptionsMenu(true)
+
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 }
